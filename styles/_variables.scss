@@ -1,0 +1,16 @@
+$green: #365742;
+$gold: #ffc107;
+$cream: #fbe8da;
+$brown: #795548;
+$light-text: #fff5e6;
+$dark-text: #333333;
+
+
+$base-size: 1em;
+$ratio: 1.25;
+
+
+@mixin width-1500 {
+    max-width: 1500px;
+    margin-inline: auto;
+}

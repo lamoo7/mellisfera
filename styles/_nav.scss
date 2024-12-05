@@ -1,0 +1,76 @@
+.logo_pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: $cream;
+  margin-block: 0.5em;
+  cursor: pointer;
+  transition: all 300ms linear;
+
+  &:hover {
+    animation: scale 400ms ease;
+  }
+}
+
+@keyframes scale {
+  50% {
+    scale: 1.1;
+  }
+}
+
+nav {
+  background-color: $green;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+
+  transition: all 200ms linear;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1em;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  overflow: hidden;
+  border-radius: 2em;
+}
+
+.nav-links li {
+  padding: 1em 1.5em;
+  color: $light-text;
+  cursor: pointer;
+  border-radius: 2em;
+  
+  &:hover {
+    background-color: darken($color: $green, $amount: 10%);
+  }
+
+  &:active {
+    background-color: darken($color: $green, $amount: 20%);
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: $light-text;
+  margin: 4px 0;
+  transition: 0.3s;
+}

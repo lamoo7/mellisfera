@@ -1,0 +1,111 @@
+footer {
+  background-color: $green;
+  color: $light-text;
+  width: 100%;
+
+  padding: 1em 2em;
+
+  h5 {
+    color: $cream;
+    flex-basis: 1;
+    width: 100%;
+    text-align: center;
+
+    span {
+      color: inherit;
+    }
+  }
+
+  .logo_pic {
+    animation: none !important;
+    width: 120px;
+    height: 120px;
+    justify-self: center;
+  }
+
+  .navbar {
+    gap: 10px
+  }
+}
+
+.links a {
+  margin-inline: 1em;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
+.social-buttons {
+  p {
+    margin-block: 10px;
+    color: $cream;
+    font-size: 1em;
+  }
+
+  .social-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 0.125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 1.5625rem;
+    font-weight: normal;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+
+    @mixin social-media-button(
+      $bg-color,
+      $hover-color,
+      $border-color: $bg-color
+    ) {
+      background: $bg-color;
+
+      &:hover,
+      &:focus {
+        color: $bg-color;
+        background: $hover-color;
+        border-color: $border-color;
+      }
+    }
+
+    &.facebook {
+      @include social-media-button(#3b5998, $cream);
+    }
+
+    &.tiktok {
+      @include social-media-button(#000, $cream);
+    }
+
+    &.youtube {
+      @include social-media-button(#bb0000, $cream);
+    }
+
+    &.instagram {
+      @include social-media-button(#c05173, $cream);
+    }
+  }
+
+  i {
+    margin: 0;
+  }
+
+  .social-buttons,
+  .fa-facebook-f,
+  .fa-tiktok,
+  .fa-youtube,
+  .fa-instagram {
+    font-size: 25px;
+  }
+}
+
+.logo {
+  display: grid;
+}
