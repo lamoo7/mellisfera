@@ -7,6 +7,8 @@
   cursor: pointer;
   transition: all 300ms linear;
 
+  margin-left: 1.25em;
+
   &:hover {
     animation: scale 400ms ease;
   }
@@ -33,7 +35,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 1em;
   flex-wrap: wrap;
   max-width: 1500px;
   margin-inline: auto;
@@ -45,6 +46,8 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 10px;
+
+  margin-right: 1.25em;
 }
 
 .nav-links li:not(:has(.button)) {
@@ -71,6 +74,7 @@ nav {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  margin-right: 1.25em;
 }
 
 .hamburger span {

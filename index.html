@@ -8,7 +8,7 @@
 	<script src="https://unpkg.com/htmx.org@2.0.0"></script>
 	<link rel="stylesheet" href="styles/style.css" />
 	<link rel="shortcut icon" href="images/icon.svg" type="image/x-icon" />
-	<script src="bundle.js"></script>
+	<script src="bundle.js" defer></script>
 	<title>Mellisfera • Natural Honey From Trusted Beekeepers</title>
 </head>
 
@@ -83,6 +83,7 @@
 	</footer>
 
 	<script>
+
 		const hamburger = document.querySelector(".hamburger");
 		const navLinks = document.querySelector(".nav-links");
 
@@ -95,6 +96,7 @@
 		hamburger.addEventListener("click", (e) => {
 			layers.forEach((layer) => layer.classList.toggle("pressed"));
 		});
+
 	</script>
 </body>
 

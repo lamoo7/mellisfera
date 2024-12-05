@@ -224,6 +224,9 @@ q::after {
 	background-size: contain;
 }
 
+.flex-section {
+	// background-image: linear-gradient( transparent, #eea403 );
+}
 .flex {
 	@include width-1500;
 
