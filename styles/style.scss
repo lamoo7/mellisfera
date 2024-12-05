@@ -145,7 +145,7 @@ i {
 }
 
 .button:hover {
-  background-color: $green;
+  background-color: #db6a00;
   color: $light-text;
   &:after {
     bottom: 2px;
@@ -288,7 +288,7 @@ i {
   .nav-links {
     display: none;
     height: 0;
-    background-color: lighten($color: $green, $amount: 5);
+    background-color: $brown;
     top: 86px;
     transition: all 0.250s ease;
     padding-block: 1em;
@@ -307,7 +307,6 @@ i {
   .nav-links.active {
     display: grid;
     height: auto;
-    backdrop-filter: blur(10px);
   }
 
   .hamburger {

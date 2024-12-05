@@ -69,7 +69,7 @@
 }
 
 .card {
-	background-color: $green;
+	background-color: $brown;
 	border-radius: 8px;
 	padding: 1em;
 
@@ -224,9 +224,9 @@ q::after {
 	background-size: contain;
 }
 
-.flex-section {
-	// background-image: linear-gradient( transparent, #eea403 );
-}
+// .flex-section {
+// 	background-image: linear-gradient( transparent, #eea403 );
+// }
 .flex {
 	@include width-1500;
 

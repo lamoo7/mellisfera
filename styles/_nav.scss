@@ -21,13 +21,11 @@
 }
 
 nav {
-  background-color: lighten($color: $green, $amount: 5);
+  background-color: $brown;
   position: sticky;
   top: 0;
   z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 200ms linear;
 }
 
@@ -55,13 +53,13 @@ nav {
   color: $light-text;
   cursor: pointer;
   border-radius: 2em;
-  
+
   &:hover {
-    background-color: $green;
+    background-color: darken($color: $brown, $amount: 5);
   }
 
   &:active {
-    background-color: darken($color: $green, $amount: 5);
+    background-color: darken($color: $brown, $amount: 10);
   }
 }
 
