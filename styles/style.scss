@@ -12,6 +12,11 @@
   outline: none;
   box-sizing: border-box;
   // interpolate-size: allow-keywords;
+
+  &::selection {
+    background-color: $gold;
+    color: $dark-text;
+  }
 }
 
 html {
@@ -175,6 +180,10 @@ i {
 
   .swap {
     flex-direction: row-reverse;
+  }
+
+  .flex {
+    flex-direction: row;
   }
 }
 

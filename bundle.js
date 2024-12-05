@@ -1,6 +1,7 @@
 const scripts = [
     'scripts/nav.js',
-    'scripts/lazy_loading.js'
+    'scripts/lazy_loading.js',
+    'scripts/gallery.js'
   ];
   
   scripts.forEach(function(script) {

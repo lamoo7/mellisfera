@@ -19,7 +19,7 @@
 }
 
 nav {
-  background-color: $green;
+  background-color: lighten($color: $green, $amount: 5);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -42,23 +42,29 @@ nav {
 .nav-links {
   display: flex;
   list-style-type: none;
-  overflow: hidden;
-  border-radius: 2em;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.nav-links li {
+.nav-links li:not(:has(.button)) {
   padding: 1em 1.5em;
   color: $light-text;
   cursor: pointer;
   border-radius: 2em;
   
   &:hover {
-    background-color: darken($color: $green, $amount: 10%);
+    background-color: $green;
   }
 
   &:active {
-    background-color: darken($color: $green, $amount: 20%);
+    background-color: darken($color: $green, $amount: 5);
   }
+}
+
+.nav-links .button {
+  margin: 0 !important;
+  width: 150px;
 }
 
 .hamburger {

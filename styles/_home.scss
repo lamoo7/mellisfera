@@ -1,222 +1,283 @@
 #home-top {
-  margin-top: 5em;
-  text-align: center;
+	margin-top: 5em;
+	text-align: center;
 
-  h5 {
-    margin-block: 4em;
-    font-weight: 100;
-  }
+	h5 {
+		margin-block: 4em;
+		font-weight: 100;
+	}
 }
 
 .textdeco {
-  transform: translateY(1em);
-  width: ($base-size * ($ratio * 5)) * 2;
+	transform: translateY(1em);
+	width: ($base-size * ($ratio * 5)) * 2;
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  @include width-1500;
-  margin-top: 2em;
-  padding-inline: 2em;
-  text-align: center;
+	@include width-1500;
+	margin-top: 2em;
+	padding-inline: 2em;
+	text-align: center;
 
-  img {
-    max-width: 100%;
-  }
+	img {
+		max-width: 100%;
+	}
 }
 
 .hero div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-  .button {
-    margin-top: 1em;
-  }
+	.button {
+		margin-top: 1em;
+	}
 }
 
 
 #honeycomb {
-  background-color: $cream;
-  background-image: url("../images/honeycomb.png");
-  background-blend-mode: multiply;
-  background-size: 10%;
+	background-color: $cream;
+	background-image: url("../images/honeycomb.png");
+	background-blend-mode: multiply;
+	background-size: 10%;
 
-  display: grid;
-  place-items: center;
-  padding: 5em 8em;
+	display: grid;
+	place-items: center;
+	padding: 5em 8em;
 
-  margin-top: 2em;
+	margin-top: 2em;
 
-  div {
-    background-color: $cream;
-    padding: 5em 8em;
-    border-radius: 1.75em;
-    text-align: center;
-  }
+	div {
+		background-color: $cream;
+		padding: 5em 8em;
+		border-radius: 1.75em;
+		text-align: center;
+	}
 }
 
 #cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1em;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1em;
 
-  @include width-1500;
-  padding-block: 2em;
+	@include width-1500;
+	padding-block: 2em;
 }
 
 .card {
-  background-color: $green;
-  border-radius: 8px;
-  padding: 1em;
+	background-color: $green;
+	border-radius: 8px;
+	padding: 1em;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 
-  width: 300px;
-  text-align: center;
+	width: 300px;
+	text-align: center;
 
-  img {
-    width: 150px;
-    margin-bottom: 0.75em;
+	img {
+		width: 150px;
+		margin-bottom: 0.75em;
 
-    mask-image: url(../images/hexagon.svg);
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-  }
+		mask-image: url(../images/hexagon.svg);
+		mask-size: contain;
+		mask-repeat: no-repeat;
+		mask-position: center;
+	}
 }
 
 .card h4 {
-  color: $light-text;
+	color: $light-text;
 }
 
 .card p {
-  color: $cream;
+	color: $cream;
 }
 
 .gradient {
-  background-image: linear-gradient( $gold, #fdb434 );
-  padding-top: 1em;
+	background-image: linear-gradient($gold, #fdb434);
+	padding-top: 1em;
 }
 
 
 .horizontal-snap {
-  width: 90vw;
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding: 1rem 0.25rem;
-  overflow: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	padding: 1rem 0.25rem;
+	overflow: auto;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x mandatory;
 
-  @include width-1500;
+	@include width-1500;
 
-  &::-webkit-scrollbar {
-    height: 0.25rem;
-  }
+	&::-webkit-scrollbar {
+		height: 0.25rem;
+	}
 
-  &::-webkit-scrollbar-track {
-    background: $gold;
-  }
+	&::-webkit-scrollbar-track {
+		background: $gold;
+	}
 
-  &::-webkit-scrollbar-thumb {
-    background: color-mix(in srgb, $brown 50%, #fff 50%);
-  }
+	&::-webkit-scrollbar-thumb {
+		background: color-mix(in srgb, $gold 50%, #fff 50%);
+	}
+
+	.element {
+		scroll-snap-align: center;
+		width: 65vw;
+		aspect-ratio: 16/10;
+		object-fit: contain;
+		background-color: lightgray;
+		box-shadow: 0px 8px 5px -6px rgba(0, 0, 0, 0.3);
+		border-radius: 8px;
+		cursor: zoom-in;
+	}
 }
 
-.horizontal-snap > .element {
-  scroll-snap-align: center;
-  height: 300px;
-  width: 80vw;
-  aspect-ratio: 16/9;
-  object-fit: contain;
-  background-color: lightgray;
-}
 
 .testimonials {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1em;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1em;
 
-  @include width-1500;
-  padding: 2em;
+	@include width-1500;
+	padding: 2em;
 }
 
 .quote {
-  border-radius: 8px;
-  padding: 1em;
+	border-radius: 8px;
+	padding: 1em;
 
-  width: 300px;
-  flex-grow: 1;
+	width: 300px;
+	flex-grow: 1;
 }
 
 .profile-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  max-width: 300px;
-  margin-block: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	max-width: 300px;
+	margin-block: 1rem;
 }
 
 .profile-card img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  background-color: $cream;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	object-fit: cover;
+	background-color: $cream;
 }
 
 .profile-info h5 {
-  font-size: 1rem;
-  margin: 0;
+	font-size: 1rem;
+	margin: 0;
 }
 
 .profile-info p {
-  font-size: 0.9rem;
-  margin: 0;
-  color: #555;
+	font-size: 0.9rem;
+	margin: 0;
+	color: #555;
 }
 
 q {
-  font-size: larger;
-  font-weight: 100;
-  font-family: "Open Sans", sans-serif;
+	font-size: larger;
+	font-weight: 100;
+	font-family: "Open Sans", sans-serif;
 }
 
 q::before {
-  content: "\f10d";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  color: $gold;
-  margin-right: 0.2em;
+	content: "\f10d";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	color: $gold;
+	margin-right: 0.2em;
 }
 
 q::after {
-  content: "\f10e";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  color: $gold;
-  margin-left: 0.2em;
+	content: "\f10e";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	color: $gold;
+	margin-left: 0.2em;
 }
 
 
 #overflow {
-  width: 100%;
-  height: 160px;
+	width: 100%;
+	height: 160px;
 
-  background-image: url(../images/under.webp);
+	background-image: url(../images/under.webp);
 }
 
 .bg {
-  height: 500px;
-  background-image: url(../images/sweet-honey-drips-background_90220-293.avif);
-  background-size: contain;
+	height: 500px;
+	background-image: url(../images/sweet-honey-drips-background_90220-293.avif);
+	background-size: contain;
+}
+
+.flex {
+	@include width-1500;
+
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 2rem;
+	padding: 2em;
+
+	img {
+		max-width: 30%;
+		min-width: 300px;
+	}
+}
+
+dialog {
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	padding: 0;
+	overflow: hidden;
+	width: 90%;
+	max-width: 600px;
+	text-align: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: $cream;
+}
+
+dialog img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	object-fit: contain;
+}
+
+dialog button {
+	display: block;
+	margin: 10px auto;
+	background-color: $gold;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+dialog button:hover {
+	background-color: $green;
+	color: $light-text;
+}
+
+dialog::backdrop {
+	background: rgba(0, 0, 0, 0.8);
 }

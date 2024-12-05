@@ -2,94 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/c48f0d09a5.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/htmx.org@2.0.0"></script>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="shortcut icon" href="images/icon.svg" type="image/x-icon" />
-    <script src="bundle.js"></script>
-    <title>Mellisfera • Natural Honey From Trusted Beekeepers</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://kit.fontawesome.com/c48f0d09a5.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/htmx.org@2.0.0"></script>
+	<link rel="stylesheet" href="styles/style.css" />
+	<link rel="shortcut icon" href="images/icon.svg" type="image/x-icon" />
+	<script src="bundle.js"></script>
+	<title>Mellisfera • Natural Honey From Trusted Beekeepers</title>
 </head>
 
 <body hx-boost="true">
-    <nav>
-        <div class="navbar">
-            <div class="logo">
-                <img src="images/logo.webp" alt="logo" class="logo_pic" hx-get="pages/home.html" hx-target="#container"
-                    hx-swap="innerHTML" />
-            </div>
-            <ul class="nav-links">
-                <li hx-get="pages/home.html" hx-target="#container" hx-swap="innerHTML">
-                    <i class="fa-solid fa-house"></i>Home
-                </li>
-                <li hx-get="pages/about.html" hx-target="#container" hx-swap="innerHTML">
-                    <i class="fa-solid fa-address-book"></i>About
-                </li>
-                <li hx-get="pages/contact.html" hx-target="#container" hx-swap="innerHTML">
-                    <i class="fa-solid fa-phone"></i>Contact
-                </li>                
-                <li hx-get="pages/shop.html" hx-target="#container" hx-swap="innerHTML">
-                  <i class="fa-solid fa-basket-shopping"></i>Shop
-              </li>
-            </ul>
-            <div class="hamburger">
-                <span class="top-bun"></span>
-                <span class="stuffing"></span>
-                <span class="bottom-bun"></span>
-            </div>
-        </div>
-    </nav>
+	<nav>
+		<div class="navbar">
+			<div class="logo">
+				<img src="images/logo.webp" alt="logo" class="logo_pic" hx-get="pages/home.html" hx-target="#container"
+					hx-swap="innerHTML" />
+			</div>
+			<ul class="nav-links">
+				<li hx-get="pages/home.html" hx-target="#container" hx-swap="innerHTML">
+					<i class="fa-solid fa-house"></i>Home
+				</li>
+				<li hx-get="pages/about.html" hx-target="#container" hx-swap="innerHTML">
+					<i class="fa-solid fa-address-book"></i>About
+				</li>
+				<li hx-get="pages/contact.html" hx-target="#container" hx-swap="innerHTML">
+					<i class="fa-solid fa-phone"></i>Contact
+				</li>
+				<li>
+					<button class="button" hx-get="pages/shop.html" hx-target="#container" hx-swap="innerHTML"> <i
+							class="fa-solid fa-basket-shopping"></i> SHOP </button>
+				</li>
+			</ul>
+			<div class="hamburger">
+				<span class="top-bun"></span>
+				<span class="stuffing"></span>
+				<span class="bottom-bun"></span>
+			</div>
+		</div>
+	</nav>
 
-    <main id="container" hx-get="pages/home.html" hx-target="#container" hx-swap="innerHTML" hx-trigger="load"></main>
+	<main id="container" hx-get="pages/home.html" hx-target="#container" hx-swap="innerHTML" hx-trigger="load"></main>
 
-    <footer>
-        <div class="navbar">
-          <div class="logo">
-            <img src="images/logo.webp" alt="logo" class="logo_pic" hx-get="pages/home.html" hx-target="#container" hx-swap="innerHTML" />
-            <h5>
-              Mellisfera ©
-              <span id="year">
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-              </span>
-            </h5>
-          </div>
-      
-          <div class="links">
-            <a href="#">Our Recipes</a>
-            <a href="#">Licenses</a>
-            <a href="#">FAQ</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-          </div>
-      
-          <div class="social-buttons">
-            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <p><i class="fa-solid fa-envelope"></i>&nbsp;mellisfera@gmail.com</p>
-            <p><i class="fa-solid fa-phone"></i>&nbsp;0712 345 678</p>
-          </div>
-        </div>
-      </footer>      
+	<footer>
+		<div class="navbar">
+			<div class="logo">
+				<img src="images/logo.webp" alt="logo" class="logo_pic" hx-get="pages/home.html" hx-target="#container"
+					hx-swap="innerHTML" />
+				<h5>
+					Mellisfera ©
+					<span id="year">
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+					</span>
+				</h5>
+			</div>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
+			<div class="links">
+				<a href="#">Our Recipes</a>
+				<a href="#">Licenses</a>
+				<a href="#">FAQ</a>
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms of Use</a>
+			</div>
 
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-        });
+			<div class="social-buttons">
+				<a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
+						class="fab fa-facebook-f"></i></a>
+				<a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><i
+						class="fab fa-tiktok"></i></a>
+				<a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i
+						class="fab fa-youtube"></i></a>
+				<a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i
+						class="fab fa-instagram"></i></a>
+				<p><i class="fa-solid fa-envelope"></i>&nbsp;mellisfera@gmail.com</p>
+				<p><i class="fa-solid fa-phone"></i>&nbsp;0712 345 678</p>
+			</div>
+		</div>
+	</footer>
 
-        const layers = document.querySelectorAll(".hamburger span");
+	<script>
+		const hamburger = document.querySelector(".hamburger");
+		const navLinks = document.querySelector(".nav-links");
 
-        hamburger.addEventListener("click", (e) => {
-            layers.forEach((layer) => layer.classList.toggle("pressed"));
-        });
-    </script>
+		hamburger.addEventListener("click", () => {
+			navLinks.classList.toggle("active");
+		});
+
+		const layers = document.querySelectorAll(".hamburger span");
+
+		hamburger.addEventListener("click", (e) => {
+			layers.forEach((layer) => layer.classList.toggle("pressed"));
+		});
+	</script>
 </body>
 
 </html>
